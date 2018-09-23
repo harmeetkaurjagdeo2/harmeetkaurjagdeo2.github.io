@@ -1,14 +1,137 @@
-body{
-  font-family: "Times New Roman";
-  font-size: 20px;
-  background: red;
-  color: yellow;
-  text-align: left;
+@charset "utf-8";
+/* CSS Document */
+.box1{
+	width: 1492px;
+	height: 1500px;
+	background-color: rgb(255,214,159);
+	padding-left: 12px;
+	padding-top: 20px;
 }
 
-@media only screen and (max-width: 600px) {
-  
-body{
-   background-color: #ffffff;
-  }
+
+
+.flip-box {
+  background-color: transparent;
+  width: 560px;
+  height: 910px;
+  perspective: 2000px;
+  background-position: right;
+  float: right;
+	margin-right: 30px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-image: url("oreo again6.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: black;
+}
+
+.flip-box-back{ background-image: url("oreo again6.png");
+  color: white;
+  transform: rotateY(180deg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: black;}
+
+.textharmeet{
+    transform: rotateZ(90deg);
+    width: 1000px;
+    height: 200px;
+    font-size: 143px;
+    font-family: League Spartan, Bold;
+    color: rgb(169,57,43);
+   margin-left:1440px;
+	margin-top: 372px;
+}
+
+
+@media only screen and (max-width:450px) {
+
+
+.box1{
+	width: 1492px;
+	height: 1500px;
+	background-color: rgb(255,214,159);
+}
+
+
+
+.flip-box {
+  background-color: transparent;
+  width: 200px;
+  height: 360px;
+  perspective: 2000px;
+  background-position: right;
+  float:right;
+	margin-right: 1220px;
+		margin-top: 50px;
+
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-image: url("oreo again6.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: black;
+}
+
+.flip-box-back{ background-image: url("oreo again6.png");
+  color: white;
+  transform: rotateY(180deg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: black;}
+
+.textharmeet{
+    transform: rotateZ(0deg);
+    width: 1000px;
+    height: 200px;
+    font-size: 70px;
+    font-family: League Spartan, Bold;
+    color: rgb(169,57,43);
+    margin-left:0px;
+	margin-top: 0px;
+	float: left;
+}
 }
